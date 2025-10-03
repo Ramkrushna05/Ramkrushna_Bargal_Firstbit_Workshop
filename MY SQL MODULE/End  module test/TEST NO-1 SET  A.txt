@@ -1,0 +1,99 @@
+TEST NO:-1 SET A
+ROLL NO:-002
+
+Question no:- 1
+ANS:- select name, salary
+from Employees
+order by salary desc;
+
+Question no:- 2
+ANS:-select name, salary
+from Employees
+order by salary desc
+limit 5;
+
+Question no:- 3
+ANS:- select *
+from Employees
+limit 5 offset 3;
+
+Question no:- 4
+ANS:-select department, COUNT(*)
+from Employees
+group by department;
+
+Question no:- 5
+ANS:-select department, avg(salary)
+from Employees
+group by department
+having avg(salary) > 50000;
+
+Question no:- 6
+ANS:-select *
+from Products
+where product_name like '%Laptop%';
+
+Question no:- 7
+ANS:-select SUBSTRING(student_name, 1, 3)
+from Students;
+
+Question no:- 8
+ANS:-select *
+from Students
+where student_name LIKE 'A%';
+
+Question no:- 9
+ANS:-select month(order_date) order_month, Count(*)
+FROM Orders
+group by month(order_date)
+having count(*) > 100;
+
+Question no:- 10
+ANS:- from Sales
+group by category
+having sum(sales_amount) > 100000;
+
+Question no:- 11
+ANS:- A)
+
+Question no:- 12
+ANS- B)
+
+Question no:- 13
+ANS:- C)
+
+Question no:- 14
+ANS:- B)
+
+Question no:- 15
+ANS:- B)
+
+Question no:- 16
+ANS:-select c.region,sum(o.total_amount)
+from Orders o
+join Customers c on o.customer_id = c.customer_id
+group by  c.region
+having sum(o.total_amount) > 10000;
+
+Question no:- 17
+ANS:-select b.author_id,sum(s.quantity)
+from Sales s
+join 
+Books b ON s.book_id = b.book_id
+group by b.author_id
+having sum(s.quantity) > 100;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
